@@ -29,7 +29,6 @@ def validate_entry(entry: str) -> None:
 def main() -> None:
     validate_entry(ENTRY)
     os.makedirs("/output", exist_ok=True)
-    os.chmod("/output", 0o755)
     path = "/output/entry.txt"
     with open(path, "w", encoding="utf-8") as f:
         f.write(ENTRY)
